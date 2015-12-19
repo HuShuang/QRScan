@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9J9-ou-20A">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--二维码扫描-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye_scan.png" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-QI-dhX">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nD4-Fd-NBc">
+                                <rect key="frame" x="71" y="274" width="273" height="40"/>
+                                <color key="backgroundColor" white="0.98086295871559648" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="bUE-Vo-Lk7"/>
+                                    <constraint firstAttribute="height" constant="40" id="fbu-eZ-JEI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="点击扫描二维码"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bUE-Vo-Lk7"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="scanCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2wa-nn-gaH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zM-ek-a7x">
+                                <rect key="frame" x="20" y="334" width="374" height="0.0"/>
+                                <color key="backgroundColor" white="0.91567517201834858" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0zM-ek-a7x" secondAttribute="trailing" constant="20" id="1gb-zd-QEw"/>
+                            <constraint firstItem="5jj-QI-dhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AJ6-yW-NNq"/>
+                            <constraint firstItem="5jj-QI-dhX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IxC-N6-hX9"/>
+                            <constraint firstItem="0zM-ek-a7x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Tih-WK-vB6"/>
+                            <constraint firstItem="0zM-ek-a7x" firstAttribute="top" secondItem="nD4-Fd-NBc" secondAttribute="bottom" constant="20" id="XJz-Nd-jQQ"/>
+                            <constraint firstItem="nD4-Fd-NBc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="amb-fJ-o7M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5jj-QI-dhX" secondAttribute="bottom" id="bKd-Ra-pBe"/>
+                            <constraint firstItem="nD4-Fd-NBc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d1v-4H-cFg"/>
+                            <constraint firstAttribute="trailing" secondItem="5jj-QI-dhX" secondAttribute="trailing" id="jrN-yu-W15"/>
+                            <constraint firstItem="0zM-ek-a7x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w0T-dG-glt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码扫描" id="enf-Y2-1mN">
+                        <barButtonItem key="rightBarButtonItem" title="关于" id="qwQ-Qe-bIw"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="label" destination="0zM-ek-a7x" id="KR8-QI-pcA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mCI-0x-fMB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9J9-ou-20A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XHE-Xp-RHh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1FD-72-tOF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzR-6w-tgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eye_scan.png" width="512" height="512"/>
+    </resources>
+</document>
