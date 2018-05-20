@@ -20,7 +20,7 @@
 @interface ViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 @property (nonatomic, strong)AVCaptureSession *session;
 @property (nonatomic, strong)AVCaptureVideoPreviewLayer *videoLayer;
-@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextView *label;
 
 
 
@@ -36,6 +36,13 @@
         NSLog(@"扫描到数据:%@", obj.stringValue);
         self.label.text = obj.stringValue;
     }
+}
+
+- (IBAction)cancel:(UIBarButtonItem *)sender {
+	if (_session.isRunning) {
+		[_session stopRunning];
+		[_videoLayer removeFromSuperlayer];
+	}
 }
 
 - (IBAction)scanCode:(id)sender {

@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9J9-ou-20A">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9J9-ou-20A">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--二维码扫描-->
@@ -15,15 +19,15 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye_scan.png" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-QI-dhX">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nD4-Fd-NBc">
-                                <rect key="frame" x="71" y="274" width="273" height="40"/>
-                                <color key="backgroundColor" white="0.98086295871559648" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="50" y="213.5" width="275" height="40"/>
+                                <color key="backgroundColor" red="0.98086297512054443" green="0.98086297512054443" blue="0.98086297512054443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="bUE-Vo-Lk7"/>
                                     <constraint firstAttribute="height" constant="40" id="fbu-eZ-JEI"/>
@@ -39,48 +43,50 @@
                                     <action selector="scanCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2wa-nn-gaH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zM-ek-a7x">
-                                <rect key="frame" x="20" y="334" width="374" height="0.0"/>
-                                <color key="backgroundColor" white="0.91567517201834858" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dXu-Na-iRz">
+                                <rect key="frame" x="10" y="273.5" width="355" height="301.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0zM-ek-a7x" secondAttribute="trailing" constant="20" id="1gb-zd-QEw"/>
+                            <constraint firstItem="dXu-Na-iRz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4jg-x4-prr"/>
                             <constraint firstItem="5jj-QI-dhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AJ6-yW-NNq"/>
                             <constraint firstItem="5jj-QI-dhX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IxC-N6-hX9"/>
-                            <constraint firstItem="0zM-ek-a7x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Tih-WK-vB6"/>
-                            <constraint firstItem="0zM-ek-a7x" firstAttribute="top" secondItem="nD4-Fd-NBc" secondAttribute="bottom" constant="20" id="XJz-Nd-jQQ"/>
-                            <constraint firstItem="nD4-Fd-NBc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="amb-fJ-o7M"/>
+                            <constraint firstItem="dXu-Na-iRz" firstAttribute="top" secondItem="nD4-Fd-NBc" secondAttribute="bottom" constant="20" id="NfI-Cu-DxS"/>
+                            <constraint firstItem="nD4-Fd-NBc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="amb-fJ-o7M"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5jj-QI-dhX" secondAttribute="bottom" id="bKd-Ra-pBe"/>
                             <constraint firstItem="nD4-Fd-NBc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d1v-4H-cFg"/>
+                            <constraint firstItem="dXu-Na-iRz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="fVV-6c-J5m"/>
                             <constraint firstAttribute="trailing" secondItem="5jj-QI-dhX" secondAttribute="trailing" id="jrN-yu-W15"/>
-                            <constraint firstItem="0zM-ek-a7x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w0T-dG-glt"/>
+                            <constraint firstItem="dXu-Na-iRz" firstAttribute="height" secondItem="5jj-QI-dhX" secondAttribute="height" multiplier="0.5" id="qAA-oM-Q0F"/>
+                            <constraint firstAttribute="trailing" secondItem="dXu-Na-iRz" secondAttribute="trailing" constant="10" id="weh-bd-GR0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="二维码扫描" id="enf-Y2-1mN">
-                        <barButtonItem key="rightBarButtonItem" title="关于" id="qwQ-Qe-bIw"/>
+                        <barButtonItem key="rightBarButtonItem" title="取消" id="qwQ-Qe-bIw">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="aRa-1w-Pfq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="label" destination="0zM-ek-a7x" id="KR8-QI-pcA"/>
+                        <outlet property="label" destination="dXu-Na-iRz" id="11M-Fl-kaP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="429"/>
+            <point key="canvasLocation" x="874" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mCI-0x-fMB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9J9-ou-20A" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XHE-Xp-RHh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
